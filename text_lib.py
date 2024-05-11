@@ -4,6 +4,21 @@ def split_text_bricks(brci_instance: BRCI_class, text: str = "Hello World!", bri
     """Gives each character in variable 'text' it's own text brick. \\n will cause it to place text bricks below the previous ones.
 
     Args:
+        brci_instance (BRCI): BRCI instance
+        text (str, optional): Text to split. Defaults to "Hello World!".
+        brickcolorHSVA (list[int], optional): Color of the text bricks. Defaults to [0, 0, 127, 255].
+        textcolorHSV (list[int], optional): Color of the text. Defaults to [0, 0, 0].
+        material (str, optional): Material of the text bricks. Defaults to "Plastic".
+        xspacing (int, optional): Horizontal spacing between text bricks. Defaults to 10.
+        yspacing (int, optional): Vertical spacing between text bricks. Defaults to 10.
+        rotation (list[int], optional): Rotation of the text bricks. Defaults to [0, 0, -90].
+        textbrick (str, optional): Text brick to use. Defaults to "Nameplate_1sx1sx1s".
+        xstart (int, optional): Starting x position. Defaults to 0.
+        ystart (int, optional): Starting y position. Defaults to 0.
+        debug (bool, optional): Whether to print debug messages. Defaults to False.
+    
+    Raises:
+        ValueError: If textbrick is not a valid text brick (Text cylinders do not count)
         
     Returns:
         both final values of the pointer (x and y variables), so you can chain this function with itself, and the BRCI instance."""
